@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="lv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakta forma</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: antiquewhite;
+        color: #333;
+        padding: 20px;
+      }
+      strong {
+        color: red;
+      }
+      p {
+        font-style: italic;
+        font-weight: bold;
+        font-family: "Times New Roman", Times, serif;
+      }
+      h1 {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sazinies ar mums!</h1>
+    <form>
+      <label for="fname"><strong>*</strong>Jūsu vārds:</label><br />
+      <input required type="text" id="fname" name="fname" value="" /><br />
+      <label for="lname"><strong>*</strong>Jūsu uzvārds:</label><br />
+      <input
+        required
+        type="text"
+        id="lname"
+        name="lname"
+        value=""
+      /><br /><br />
+      <label for="email"><strong>*</strong>Jūsu e-pasts:</label><br />
+      <input required type="text" id="email" name="email" /><br />
+      <p><strong>*</strong>Tēma:</p>
+      <input
+        type="radio"
+        id="TehniskaisAtbalsts"
+        name="help"
+        value="TehniskaisAtbalsts"
+      />
+      <label for="TehniskaisAtbalsts">Tehniskais atbalsts</label><br />
+      <input type="radio" id="Piedāvājumi" name="help" value="Piedāvājumi" />
+      <label for="Piedāvājumi">Piedāvājumi</label><br />
+      <input
+        type="radio"
+        id="VispārīgiJautājumi"
+        name="help"
+        value="VispārīgiJautājumi"
+      />
+      <label for="javascript">Vispārīgi jautājumi</label><br /><br />
+      <input type="checkbox" id="sanjaun" name="sanjaun" value="jaunumi" />
+      <label for="sanjaun">Es piekristu saņemt jaunumus.</label><br />
+      <p>
+        <label for="ziņojums"
+          ><strong>*</strong>Lūdzu, ievadiet savu ziņojumu:</label
+        >
+      </p>
+      <textarea required id="ziņojums" name="" rows="4" cols="50"></textarea>
+      <br />
+      <button type="submit">Atsutīt</button>
+    </form>
+  </body>
+</html>
