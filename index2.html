@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="lv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML forma ar dažādiem ievades veidiem</title>
+    <style>
+      strong {
+        color: red;
+      }
+      input {
+        border-style: ridge;
+        border-color: rgb(255, 240, 243);
+      }
+      p {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-style: oblique;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <p><label for="hi">Say hi to the new Galaxy Note</label></p>
+      <textarea
+        id="hi"
+        name="hi"
+        rows="2"
+        cols="25"
+        placeholder="Hi"
+      ></textarea>
+      <br /><br />
+      <label
+        for="email"
+        style="
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+            'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        "
+        >Email:</label
+      >
+      <input type="email" id="email" name="email" /><br /><br />
+      <label for="pwd">Password:</label>
+      <input type="password" id="pwd" name="pwd" minlength="8" /><br /><br />
+      <label for="phone"
+        ><strong>*</strong>Enter your phone number:<br />
+        <small><i>Format: 123-456-7890</i></small
+        ><br />
+      </label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        required
+      /><br /><br />
+      <label for="funnynumbers">funny numbers!</label>
+      <input
+        type="number"
+        id="funnynumbers"
+        name="funnynumbers"
+        placeholder="33"
+        min="1"
+        max="99"
+      /><br /><br />
+      <label for="datee">Choose date, just for fun!</label><br />
+      <input
+        type="date"
+        id="datee"
+        name="date-chooser"
+        value="2024-11-01"
+        min="2024-11-01"
+        max="2024-11-02"
+      /><br /><br />
+      <label for="url"><strong>*</strong>Enter an https:// URL:</label>
+      <input
+        type="url"
+        name="url"
+        id="url"
+        placeholder="https://example.com"
+        pattern="https://.*"
+        size="30"
+        required
+      /><br /><br />
+      <fieldset>
+        <legend>Choose your monster's features:</legend>
+
+        <div>
+          <input type="checkbox" id="scales" name="scales" checked />
+          <label for="scales">Scales</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="horns" name="horns" />
+          <label for="horns">Horns</label>
+        </div>
+      </fieldset>
+      <p><strong>*</strong>Tēma:</p>
+      <input
+        type="radio"
+        id="TehniskaisAtbalsts"
+        name="help"
+        value="TehniskaisAtbalsts"
+      />
+      <label for="TehniskaisAtbalsts">Tehniskais atbalsts</label><br />
+      <input type="radio" id="Piedāvājumi" name="help" value="Piedāvājumi" />
+      <label for="Piedāvājumi">Piedāvājumi</label><br />
+      <input
+        type="radio"
+        id="VispārīgiJautājumi"
+        name="help"
+        value="VispārīgiJautājumi"
+      />
+      <label for="javascript">Vispārīgi jautājumi</label><br /><br />
+      <label for="avatar">Choose a profile picture:</label>
+
+      <input
+        type="file"
+        id="avatar"
+        name="avatar"
+        accept="image/png, image/jpeg"
+      />
+      <br /><br />
+      <input type="submit" value="отправить" />
+    </form>
+  </body>
+</html>
